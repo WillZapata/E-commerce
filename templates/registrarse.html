@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Unete a nuestra familia de clientes felices{% endblock %}</h1>
+{% endblock %}
+
+{% block contenido %}
+
+    <center>
+
+        <form action="{{ url_for('registro') }}" method="post" name="formRegistro" onsubmit="validar_formulario();">
+            <div>
+            <label for="Nombre"> Nombre </label>
+            </div>
+            <div>
+            <input type="text" name="Nombre" id="Nombre">
+            </div>
+            <div>
+            <label for="usuario"> Usuario </label>
+            </div>
+            <div>
+            <input type="text" name="Usuario" id="Usuario">
+            </div>
+            <div>
+            Sexo:
+            <label for="Sexo"> F </label>
+            <input type="radio" name="Sexo" id="Sexo" value="f">
+            <label for="Sexo"> M </label>
+            <input type="radio" name="Sexo" id="Sexo" value="m">
+            </div>
+            <div>
+            <label for="email"> email </label>
+            </div>
+            <div>
+            <input type="email" name="email" id="email">
+            </div>
+            <div>
+            <label for="password"> Contraseña </label>
+            </div>
+            <div>
+            <input type="password" name="password" id="password">
+            <img src="{{ url_for('static', filename='img/ojito.png') }}" alt="ojito" onmouseover="mostrarpassword()" onmouseout="ocultarpassword();">
+            </div>
+            <div>
+            <input type="checkbox" name="Condiciones" id="Condiciones">
+            <label for="Condiciones"> Declaro que soy mayor de edad </label>
+            </div>
+            <div>
+            <input class="boton negrilla" type="submit" value="Registrarse">
+            </div>
+        </form>
+    </center>
+{% endblock %}

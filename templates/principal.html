@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Elige los productos que más te gusten{% endblock %}</h1>
+{% endblock %}
+
+{% block contenido %}
+    <center>
+        <form action="{{ url_for('principal') }}" method="post" name="formRegistro2" onsubmit="validar_formulario();">
+            <div>
+                {{  form.Buscar.label  }}
+            </div>
+            <div>
+                {{  form.Buscar  }}
+            </div>
+            <div>
+                {{  form.enviar2  }}
+            </div>
+        </form>
+        <p> <h2>Categorias</h2> </p>
+    </center>
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='img/electro.jpg') }}" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Electrodomesticos</h5>
+                  <a href="#" class="btn btn-primary">Ver productos</a>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='img/deportes.jfif') }}" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Deportes</h5>
+                  <a href="#" class="btn btn-primary">Ver productos</a>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='img/audio.jfif') }}" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Audio y video</h5>
+                  <a href="#" class="btn btn-primary">Ver productos</a>
+                </div>
+              </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ url_for('static', filename='img/juguetes.jfif') }}" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">Juguetes</h5>
+                  <a href="#" class="btn btn-primary">Ver productos</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}

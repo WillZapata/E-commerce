@@ -1,0 +1,32 @@
+h1 {
+    font-family: serif;
+    text-align: center;
+    color: #377ba8;
+    background-color: lightblue;
+    margin: 0;
+}
+
+form {
+    background-color: #ccc;
+    padding: 16px;
+    width: 350px;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+}
+
+input {
+    margin: 6px;
+}
+
+.boton {
+    text-align: center;
+}
+
+.negrilla {
+    font-weight: bold;
+}
+
+colortext {
+    color: white;
+}
