@@ -7,60 +7,17 @@
 {% block contenido %}
     <div class="container">
         <div class="row">
+          {% for pro in productos %}
           <div class="col">
             <div class="card" style="width: 18rem;">
                 <img src="{{ url_for('static', filename='img/tele.jfif') }}" class="card-img-top">
                 <div class="card-body">
-                  <h5 class="card-title">Televisor LG</h5>
+                  <h5 class="card-title">{% print(pro[2]) %}</h5>
                   <a href="#" class="btn btn-primary">Comprar online</a>
                 </div>
               </div>
           </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ url_for('static', filename='img/parlante.jfif') }}" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">Parlante Boss</h5>
-                  <a href="#" class="btn btn-primary">Comprar online</a>
-                </div>
-              </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ url_for('static', filename='img/bici.jfif') }}" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">Bicicleta eliptica</h5>
-                  <a href="#" class="btn btn-primary">Comprar online</a>
-                </div>
-              </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ url_for('static', filename='img/lava.jfif') }}" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">Lavadora LG</h5>
-                  <a href="#" class="btn btn-primary">Comprar online</a>
-                </div>
-              </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ url_for('static', filename='img/nevera.jfif') }}" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">Nevera Samsung</h5>
-                  <a href="#" class="btn btn-primary">Comprar online</a>
-                </div>
-              </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="{{ url_for('static', filename='img/descarga.jfif') }}" class="card-img-top">
-                <div class="card-body">
-                  <h5 class="card-title">Balón de futbol Adidas</h5>
-                  <a href="#" class="btn btn-primary">Comprar online</a>
-                </div>
-              </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
 {% endblock %}

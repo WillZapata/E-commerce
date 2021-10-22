@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+</head>
+<body>
+    <h1>Productos</h1>
+
+    <table id="tabel" border="1">
+        <tbody>
+        <tr>
+        <td width="2">Codigo</td>
+        <td width="2">Codigo de categoria</td>
+        <td width="2">Nombre</td>
+        <td width="2">Precio</td>
+        <td width="2">Cantidad</td>
+        </tr>
+        {% for pro in productos %}
+        <tr>
+        <td width="2">{% print(pro[0]) %}</td>
+        <td width="2">{% print(pro[1]) %}</td>
+        <td width="2">{% print(pro[2]) %}</td>
+        <td width="2">{% print(pro[3]) %}</td>
+        <td width="2">{% print(pro[4]) %}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    
+</body>
+</html>

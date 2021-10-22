@@ -10,8 +10,8 @@ function validar_formulario() {
         if (busuario == ""){
             alert("El campo usuario no debe estar vacio");
             return false;
-        }else if (busuario.length < 8){
-            alert("El campo usuario debe tener mínimo 8 caracteres");
+        }else if (busuario.length < 4){
+            alert("El campo usuario debe tener mínimo 4 caracteres");
             return false;
         }else if (bemail == ""){
             alert("El campo correo electrónico no debe estar vacio");
@@ -22,8 +22,33 @@ function validar_formulario() {
         }else if (bpassword == ""){
             alert("El campo contraseña no debe estar vacio");
             return false;
-        }else if (bpassword.length < 8){
-            alert("El campo contraseña debe tener mínimo 8 caracteres");
+        }else if (bpassword.length < 5){
+            alert("El campo contraseña debe tener mínimo 5 caracteres");
+            return false;
+        }
+}
+
+function validar_formularioproducto() {
+    bid = document.getElementById("id").value;
+    bcategoria = document.getElementById("id_categoria").value;
+    bnombre = document.getElementById("Nombre").value;
+    bprecio = document.getElementById("Precio").value;
+    bcantidad = document.getElementById("Cantidad").value;
+
+        if (bid == ""){
+            alert("El campo codigo no debe estar vacio");
+            return false;
+        }else if (bcategoria == ""){
+            alert("El campo codigo de categoria no debe estar vacio");
+            return false;
+        }else if (bnombre == ""){
+            alert("El campo Nombre no debe estar vacio");
+            return false;
+        }else if (bprecio == ""){
+            alert("El campo Precio no debe estar vacio");
+            return false;
+        }else if (bcantidad == ""){
+            alert("El campo Cantidad no debe estar vacio");
             return false;
         }
 }

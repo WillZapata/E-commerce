@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Agregar productos{% endblock %}</h1>
+{% endblock %}
+
+{% block contenido %}
+
+    <center>
+
+        <form action="{{ url_for('agregar_producto') }}" method="post" name="formRegistro5" onsubmit="validar_formularioproducto();">
+            <div>
+            <label for="Nombre"> Codigo del producto </label>
+            </div>
+            <div>
+            <input type="text" name="id" id="id">
+            </div>
+            <div>
+            <label for="id_categoria"> Codigo de categoria </label>
+            </div>
+            <div>
+            <input type="text" name="id_categoria" id="id_categoria">
+            </div>
+            <div>
+            <label for="Nombre"> Nombre </label>
+            </div>
+            <div>
+            <input type="text" name="Nombre" id="Nombre">
+            </div>
+            <div>
+            <label for="Precio"> Precio </label>
+            </div>
+            <div>
+            <input type="text" name="Precio" id="Precio">
+            </div>
+            <div>
+            <label for="Cantidad"> Cantidad </label>
+            </div>
+            <div>
+            <input type="text" name="Cantidad" id="Cantidad">
+            </div>
+            <div>
+            <input class="boton negrilla" type="submit" value="Agregar Producto">
+            </div>
+        </form>
+    </center>
+{% endblock %}
