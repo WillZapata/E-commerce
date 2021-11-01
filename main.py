@@ -146,7 +146,7 @@ def agregar_producto():
                 error = "Cantidad requerida"
                 flash(error)
 
-            name = db.execute('SELECT * FROM productos WHERE id_producto = ? ', (vid)).fetchone()
+            name = db.execute('SELECT * FROM productos WHERE id_producto = ? ', (vid,)).fetchone()
             if name is not None:
                 error = "Producto ya existe"
                 flash(error)
@@ -158,7 +158,7 @@ def agregar_producto():
                 )
                 db.commit()
                 flash('Producto agregado a base de datos')       
-                return redirect( url_for('productos') )
+                return redirect( url_for('entrada') )
 
         return render_template("registrar_producto.html")
     except:
