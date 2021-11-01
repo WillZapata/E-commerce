@@ -225,14 +225,6 @@ def select_usuario():
     lista_usuarios = [ { "id": id, "nombre": nombre, "usuario": usuario, "correo": correo, "contraseña": contraseña } ]
     return lista_usuarios
 
-
-# @app.route('/delete/<id>/', methods=['GET', 'POST'])
-# def borrar_producto():
-#     id = request.args.get('id')
-#     sql_delete_usuario(id)
-#     flash("Usuario id = {} eliminado".format(id))
-#     return redirect(url_for('usuario'))
-
 @app.route('/delete/<id>/', methods=['GET', 'POST'])
 def borrar_usuario(id):
     int(id)
@@ -242,16 +234,6 @@ def borrar_usuario(id):
     con.commit()
     flash("Usuario Eliminado Exitosamente")
     return redirect(url_for('usuario'))
-
-
-# def sql_delete_usuario(id):
-#     sql = "DELETE FROM usuarios WHERE id = '{}'".format(id)
-#     print(sql)
-#     con = sql_connection()
-#     cursorObj = con.cursor()
-#     cursorObj.execute(sql)
-#     con.commit()
-#     con.close()
 
 
 @app.route('/actualizar_usuario/<id>/', methods=['GET'])
@@ -280,20 +262,6 @@ def editar_usuario(id):
         flash("Usuario Actualizado Exitosamente")
         return redirect(url_for('usuario'))
 
-# con = sql_connection()
-#     cursorObj = con.cursor()
-#     cursorObj.execute("SELECT nombre, usuario, correo, contraseña FROM usuarios WHERE id=?;", (nombre, usuario, correo, contraseña))
-#     usuarios = cursorObj.fetchall()
-#     lista_usuarios = [ { "id": id, "nombre": nombre, "usuario": usuario, "correo": correo, "contraseña": contraseña } ]
-
-# def sql_edit_producto(id, nombre, precio, existencia):
-#     sql = "UPDATE Producto SET nombre = '{}', precio = '{}', existencia = '{}' WHERE id = '{}'".format(nombre, precio, existencia, id)
-#     print(sql)
-#     con = sql_connection()
-#     cursorObj = con.cursor()
-#     cursorObj.execute(sql)
-#     con.commit()
-#     con.close()
 
 @app.route('/actualizar/<id>', methods=['GET'])
 def actualizar():
