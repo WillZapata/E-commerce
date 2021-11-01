@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Actualiza los datos del usuario{% endblock %}</h1>
+{% endblock %}
+
+{% block contenido %}
+
+    <center>
+
+        <form action="/editar/{{usu[0]}}/" method="post" name="formRegistro" onsubmit="">
+            <div>
+            <label for="Nombre"> Nombre </label>
+            </div>
+            <div>
+            <input type="text" name="Nombre" id="Nombre" value="{{usu[1]}}">
+            </div>
+            <div>
+            <label for="usuario"> Usuario </label>
+            </div>
+            <div>
+            <input type="text" name="Usuario" id="Usuario" value="{{usu[2]}}">
+            </div>
+            <div>
+            <label for="email"> Correo </label>
+            </div>
+            <div>
+            <input type="email" name="email" id="email" value="{{usu[3]}}">
+            </div>
+            <div>
+            <label for="password"> Contraseña </label>
+            </div>
+            <div>
+            <input type="password" name="password" id="password" value="{{usu[4]}}">
+            <div>
+            <input class="boton negrilla" type="submit" value="Actualizar">
+            </div>
+        </form>
+    </center>
+{% endblock %}

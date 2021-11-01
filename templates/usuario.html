@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Administrar usuarios{% endblock %}</h1>
+{% endblock %}
+
+{% block contenido %}
+
+<center>
+
+    <table class="table" id="tabel" border="1">
+        <tbody>
+            <tr>
+                <td width="2">Id</td>
+                <td width="2">Nombre</td>
+                <td width="2">Usuario</td>
+                <td width="2">Email</td>
+                <td width="2">Contraseña</td>
+            </tr>
+            {% for usu in usuarios %}
+            <tr>
+                <td width="2">{% print(usu[0]) %}</td>
+                <td width="2">{% print(usu[1]) %}</td>
+                <td width="2">{% print(usu[2]) %}</td>
+                <td width="2">{% print(usu[3]) %}</td>
+                <td width="2">{% print(usu[4]) %}</td>
+                <td>
+                    <a href="/actualizar_usuario/{{usu[0]}}"> Actualizar </a>
+                </td>
+                <td>
+                    <a href="/delete/{{usu[0]}}"> Eliminar </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</center>
+{% endblock %}
